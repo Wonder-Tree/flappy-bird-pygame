@@ -2,14 +2,7 @@
 
 # Flappy Bird (Augmented Reality)
 
-A clone of the popular app *Flappy Bird*, using Pygame.
-
-This code is forked from https://github.com/TimoWilken/flappy-bird-pygame
-
-[![CodeFactor](https://www.codefactor.io/repository/github/wonder-tree/pong-python/badge)](https://www.codefactor.io/repository/github/wonder-tree/pong-python)
-
-# Pong (Augmented Reality)
-Single player pong game in python using pygame library and Pose Camera.
+A clone of the popular app *Flappy Bird*, using Pygame and PoseCamera sdk
 
 ## Requirements
 
@@ -29,4 +22,4 @@ python flappybird.py
 
 ## Output
 
-![PoseCamera](outputs/ezgif-1-c20809885e88.gif)
+![PoseCamera](assets/flappy.gif)
