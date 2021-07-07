@@ -1,24 +1,32 @@
 [![CodeFactor](https://www.codefactor.io/repository/github/wonder-tree/flappy-bird-pygame/badge)](https://www.codefactor.io/repository/github/wonder-tree/flappy-bird-pygame)
 
-# Flappy Bird Pose Camera
+# Flappy Bird (Augmented Reality)
 
 A clone of the popular app *Flappy Bird*, using Pygame.
 
 This code is forked from https://github.com/TimoWilken/flappy-bird-pygame
 
-# Magic behind the scenes
+[![CodeFactor](https://www.codefactor.io/repository/github/wonder-tree/pong-python/badge)](https://www.codefactor.io/repository/github/wonder-tree/pong-python)
 
-```python
-        if cam.isOpened():
-            ret, image = cam.read()
-            image = cv2.flip(image, 1)
-            image = cv2.resize(image, (WIN_WIDTH, WIN_HEIGHT))
+# Pong (Augmented Reality)
+Single player pong game in python using pygame library and Pose Camera.
 
-            poses = posecamera.estimate(image)
-            for pose in poses:
-                # pose.draw(image)
-                nose = pose.keypoints[0]
-                bird.x = nose[0]
-                bird.y = nose[1]
+## Requirements
+
+* Python 3.6
+
+## How to run
+
+Install dependencies
 ```
-![Sampel output](assets/flappy.gif)
+pip install -r requirements.txt
+```
+
+Run the game
+```
+python flappybird.py
+```
+
+## Output
+
+![PoseCamera](outputs/ezgif-1-c20809885e88.gif)
