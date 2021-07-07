@@ -21,4 +21,4 @@ This code is forked from https://github.com/TimoWilken/flappy-bird-pygame
                 bird.x = nose[0]
                 bird.y = nose[1]
 ```
-![Sampel output](flappy.gif)
+![Sampel output](assets/flappy.gif)

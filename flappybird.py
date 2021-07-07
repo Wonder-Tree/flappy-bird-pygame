@@ -355,8 +355,8 @@ def main():
             nose = pose.keypoints["nose"]
 
             # transform bird coordinates according to nose keypoint
-            bird.x = nose[1]
-            bird.y = nose[0]
+            bird.x = nose[0]
+            bird.y = nose[1]
 
         clock.tick(FPS)
 
