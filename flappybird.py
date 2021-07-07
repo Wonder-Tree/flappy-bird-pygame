@@ -16,8 +16,8 @@ import cv2
 
 FPS = 60
 ANIMATION_SPEED = 0.18  # pixels per millisecond
-WIN_WIDTH = 284 * 2     # BG image size: 284x512 px; tiled twice
-WIN_HEIGHT = 512
+WIN_WIDTH = 800     # BG image size: 284x512 px; tiled twice
+WIN_HEIGHT = 600
 
 
 class Bird(pygame.sprite.Sprite):
@@ -310,7 +310,7 @@ def msec_to_frames(milliseconds, fps=FPS):
     return fps * milliseconds / 1000.0
 
 
-def main():
+def main(callback=None):
     """The application's entry point.
 
     If someone executes this module (instead of importing it, for
@@ -319,8 +319,9 @@ def main():
 
     pygame.init()
 
+
     display_surface = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
-    pygame.display.set_caption('Pygame Flappy Bird')
+    pygame.display.set_caption('Flappy Bird - PoseCamera')
 
     clock = pygame.time.Clock()
     score_font = pygame.font.SysFont(None, 32, bold=True)  # default font
@@ -332,6 +333,10 @@ def main():
                 (images['bird-wingup'], images['bird-wingdown']))
 
     pipes = deque()
+
+    # PoseCamera luncher calback
+    if(callback is not None):
+        callback()
     
     # init PoseCamera sdk
     det = posecamera.pose_tracker.PoseTracker()
@@ -341,6 +346,7 @@ def main():
 
     score = 0
     done = paused = False
+
     while not done:
 
         if cam.isOpened():
